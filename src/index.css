@@ -11,3 +11,163 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  /* -moz-box-sizing: border-box; */
+  /* -webkit-box-sizing: border-box; */
+}
+
+.App{
+  width: 100%;
+}
+
+/* Header */
+.header{
+  width: 100%;
+  border-bottom: 1px solid #222;
+  padding: 0 16px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+}
+
+.title{
+
+  font-size: 28px;
+
+}
+
+
+/* statusBar */
+
+.status-bar{
+
+  width: 100%;
+  border-bottom: 1px solid #222;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+
+}
+
+.status-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.user-status{
+  width: 76px;
+  height: 76px;
+  /* background-color: red; */
+  margin: 8px;
+  flex-shrink: 0;
+  
+}
+
+.user-gradient{
+  background: linear-gradient(245deg, rgb(226, 147, 73) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-image{
+  box-sizing: border-box;
+  height: 95%;
+  width: 95%;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  border: black 4px solid;
+
+  
+}
+
+
+/* bottomNav */
+.bottom-nav{
+  /* background-color: red; */
+  width: 100%;
+  height: 46px;
+
+  /* border-top: 1px #333 solid; */
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+.bottom-nav-mob{
+  border-top: 1px #333 solid;
+}
+
+.bottom-nav-mob > .bottom-nav{
+  position: absolute;
+  bottom: 0;  
+}
+
+.bottom-nav-desk{
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.bottom-nav-desk > .bottom-nav > .nav-links{
+  margin-left: 35px;
+}
+
+.nav-links{
+  /* background-color: red; */
+  /* border: 2px solid black; */
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.nav-icons{
+  font-size: 24px;
+}
+
+.bottom-nav-image{
+  width: 30px;
+}
+
+@media (min-width : 720px) {
+  .bottom-nav-mob{
+    display: none;
+  }
+
+  .bottom-nav-desk{
+    display: block;
+  }
+
+}
+
+@media (max-width : 720px) {
+  .bottom-nav-mob{
+    display: block;
+  }
+
+  .bottom-nav-desk{
+    display: none;
+  }
+}
