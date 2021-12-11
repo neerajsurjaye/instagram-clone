@@ -1,18 +1,24 @@
 let StatusBar = () => {
 
     return (
-        <section className='status-bar'>
+        <div className="status-bar">
+            <section className='status-bar'>
 
-            {(() => {
-                let out = []
-                for (let i = 0; i < 20; i++) {
-                    out.push(<UserStatus name="name"></UserStatus>)
-                }
+                {(() => {
+                    let out = []
+                    for (let i = 0; i < 20; i++) {
+                        out.push(<UserStatus name="name"></UserStatus>)
+                    }
 
-                return out
-            })()}
+                    return out
+                })()}
 
-        </section>
+
+
+            </section >
+            <div className="status-bar-shadow"></div>
+
+        </div >
     )
 
 }
